@@ -10,6 +10,7 @@ We need to set up the XML catalog in Eclipse to make the schema assistant work.
 1. In the navigation tree expand the “Web and XML” group and select “XML Catalog”.
 1. Add a User Specified Entry
 1. Set namspace to be "http://pmd.sourceforge.net/ruleset/2.0.0", and schema file location to be the XSD file
+ref: [Edit the XML Catalog settings in Eclipse](https://wiki.eclipse.org/Using_the_XML_Catalog)
 
 # Install PMD Plugin for Eclipse
 You don't need to install the plugin for Eclipse (the standalone CLI tool would be good enough). But if you really want to, read along.
