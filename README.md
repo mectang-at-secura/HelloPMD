@@ -29,6 +29,14 @@ To install the PMD plugin for Eclipse:
 1. Enter “PMD” into the Name field and https://dl.bintray.com/pmd/pmd-eclipse-plugin/updates/ into the URL field
 1. Click through the rest of the dialog boxes to install the plugin
 
+# Add PMD Library
+You might also add the PMD library as dependency for this project, in order to invoke PMD directly in the code.
+1. Select "Windows" -> "Preferences", locate to "Java -> Build Path" -> "User Libraries";
+1. CLick "New" button to add a new user library, set up a name like "PMD";
+1. Click "Add External JARS" to import all those Jar files in the PMD "lib" directory
+1. Click "Aply and Close", then add this user library into current project's Libraries list.
+
+
 # References
 * [PMD official documentation](https://pmd.github.io/pmd-6.7.0/)
 * [PMD plugin for Eclipse](https://pmd.github.io/pmd-6.7.0/pmd_userdocs_tools.html#eclipse)
