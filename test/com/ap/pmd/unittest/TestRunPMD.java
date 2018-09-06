@@ -12,6 +12,13 @@ public class TestRunPMD {
 	private static final String WHITE_SPACE = "\\s+";
 	
 	@Test
+	public void testRunCustomRuleSet() {
+		String argStr = "-d ./src/ -R rules/custom-ruleset.xml -auxclasspath ./bin/ -no-cache -f text";
+		PMD.run(argStr.split(WHITE_SPACE));
+	}
+	
+	@Ignore("sample ruleset")
+	@Test
 	public void testRunPMDAgainstSrc() {
 		String[] args = "-d ./src/ -R rules/sample-ruleset.xml -auxclasspath ./bin/ -cache pmd-cache -f text".split(WHITE_SPACE);
 		//PMD.main(args);	//System.exit() will result into JUnit Test runner yielding a gray bar
