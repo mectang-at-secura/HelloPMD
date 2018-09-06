@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Custom Rules"
+	xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XML-Schema-instance">
+	<!-- xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.net/ruleset_2_0_0.xsd"> -->
+	<description>Custom rulset that utilizing the Built-in XPath rule</description>
+	<rule name="WhileLoopsMustUseBraces" 
+		language="java"
+		message="While statement should have braces"
+		class="net.sourceforge.pmd.lang.rule.XPathRule">
+		<description>The while statement should have braces enclosing all the statements</description>	
+		<priority>3</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<![CDATA[
+						//WhileStatement[not(Statement/Block)]
+					]]>
+				</value>
+			</property>
+		</properties>
+		<example>
+			<![CDATA[
+				while (true) ++x;	//not recommended
+				while (true) {++x;}	//preferred approach
+			]]>
+		</example>
+	</rule>
+		
+</ruleset>

@@ -12,7 +12,14 @@ public class TestRunPMD {
 	private static final String WHITE_SPACE = "\\s+";
 	
 	@Test
-	public void testRunCustomRuleSet() {
+	public void testRunCustomRuleSetXPath() {
+		String argStr = "-d ./src/ -R rules/custom-ruleset-xpath.xml -auxclasspath ./bin/ -no-cache -f text";
+		PMD.run(argStr.split(WHITE_SPACE));
+	}
+	
+	@Ignore("Custom ruleset defined with Java")
+	@Test
+	public void testRunCustomRuleSetJava() {
 		String argStr = "-d ./src/ -R rules/custom-ruleset-java.xml -auxclasspath ./bin/ -no-cache -f text";
 		PMD.run(argStr.split(WHITE_SPACE));
 	}
