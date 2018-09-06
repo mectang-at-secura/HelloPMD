@@ -7,6 +7,16 @@
 	<description>
 		My custom rules
 	</description>
+	
+	<!-- strange grammar, yet it seems to work -->
+	<exclude-pattern>.*/com/ap/pmd/samplesource/TestErrorProne.*</exclude-pattern>
+	
 	<rule ref="category/java/errorprone.xml/EmptyTryBlock"/>
 	<rule ref="category/java/errorprone.xml/EmptyCatchBlock"/>
+	
+	<!-- Bulk adding rules -->
+	<rule ref="category/java/codestyle.xml/ControlStatementBraces"/>
+	<!-- <rule ref="category/java/codestyle.xml">
+		<exclude name="ControlStatementBraces"/>
+	</rule> -->
 </ruleset>
