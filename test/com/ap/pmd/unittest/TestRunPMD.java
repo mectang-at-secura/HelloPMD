@@ -13,7 +13,7 @@ public class TestRunPMD {
 	
 	@Test
 	public void testRunCustomRuleSet() {
-		String argStr = "-d ./src/ -R rules/custom-ruleset.xml -auxclasspath ./bin/ -no-cache -f text";
+		String argStr = "-d ./src/ -R rules/custom-ruleset-java.xml -auxclasspath ./bin/ -no-cache -f text";
 		PMD.run(argStr.split(WHITE_SPACE));
 	}
 	

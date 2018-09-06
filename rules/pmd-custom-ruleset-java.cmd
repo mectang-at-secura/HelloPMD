@@ -11,4 +11,4 @@ REM set MAIN_CLASS=net.sourceforge.pmd.PMD
 
 REM java -classpath "%TOPDIR%\lib\*" %OPTS% %MAIN_CLASS% %*
 set PMD_DIR=C:\Programs\pmd-bin-6.7.0
-java -classpath "%PMD_DIR%\lib\*";../bin/ net.sourceforge.pmd.PMD -d ../src/ -R custom-ruleset.xml -auxclasspath ../bin/ -no-cache -f text
+java -classpath "%PMD_DIR%\lib\*";../bin/ net.sourceforge.pmd.PMD -d ../src/ -R custom-ruleset-java.xml -auxclasspath ../bin/ -no-cache -f text
