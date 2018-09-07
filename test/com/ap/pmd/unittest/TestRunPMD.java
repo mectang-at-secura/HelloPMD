@@ -11,7 +11,7 @@ public class TestRunPMD {
 
 	private static final String WHITE_SPACE = "\\s+";
 	
-	
+	@Ignore("Custom rulset defined with XPath")
 	@Test
 	public void testRunCustomRuleSetXPath() {
 		String argStr = "-d ./src/ -R rules/custom-ruleset-xpath.xml -auxclasspath ./bin/ -no-cache -f text";
@@ -25,14 +25,14 @@ public class TestRunPMD {
 		PMD.run(argStr.split(WHITE_SPACE));
 	}
 	
-	@Ignore("customrules.xml")
+	//@Ignore("PMD Ruleset for AgencyPortal")
 	@Test
-	public void testRunCustomRuleSetJava_Lucky() {
-		String argStr = "-d ./src/ -R rules/customrules.xml -auxclasspath ./bin/ -no-cache -f text";
+	public void testRunCustomRuleSetAgencyPortal() {
+		String argStr = "-d ./src/ -R rules/ap-ruleset.xml -auxclasspath ./bin/ -no-cache -f text";
 		PMD.run(argStr.split(WHITE_SPACE));
 	}
 	
-	//@Ignore("sample ruleset")
+	@Ignore("sample ruleset")
 	@Test
 	public void testRunPMDAgainstSrc() {
 		String[] args = "-d ./src/ -R rules/sample-ruleset.xml -auxclasspath ./bin/ -cache pmd-cache -f text".split(WHITE_SPACE);

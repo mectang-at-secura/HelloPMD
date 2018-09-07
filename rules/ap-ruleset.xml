@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Custom Rules" xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XML-Schema-instance">
+	<!-- xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.net/ruleset_2_0_0.xsd"> -->
+
+	<description>
+		PMD ruleset for the AgencyPortal project
+	</description>
+	
+	<rule ref="category/java/errorprone.xml/EmptyTryBlock" />
+	<rule ref="category/java/errorprone.xml/EmptyCatchBlock" />
+	<rule ref="category/java/errorprone.xml/EmptyIfStmt" />
+	<rule ref="category/java/errorprone.xml/EmptyWhileStmt" />
+	<rule ref="category/java/errorprone.xml/EmptyFinallyBlock" />
+	<rule ref="category/java/errorprone.xml/EmptySwitchStatements" />
+
+	<rule name="EmptyForStmt" language="java" since="0.2"
+		message="Avoid empty 'for' statements" class="net.sourceforge.pmd.lang.rule.XPathRule">
+		<description>
+			Empty For Statement finds all instances where a while
+			statement does
+			nothing.
+			If it is a timing loop, then you should use
+			Thread.sleep() for it; if
+			it is
+			a while loop that does a lot in the
+			exit expression, rewrite it to
+			make it clearer.
+		</description>
+		<priority>3</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					<![CDATA[
+						//ForStatement/Statement[./Block[count(*) = 0]  or ./EmptyStatement]
+					]]>
+				</value>
+			</property>
+		</properties>
+		<example>
+			<![CDATA[
+				void bar(int a, int b) {
+    				for (a == b) {
+        			// empty!
+    			}
+			}
+ 			]]>
+		</example>
+	</rule>
+</ruleset>
