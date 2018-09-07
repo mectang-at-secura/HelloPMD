@@ -7,9 +7,16 @@ import org.junit.Test;
 import net.sourceforge.pmd.PMD;
 
 
+/**
+ * <p>
+ * Sample script to run PMD.
+ * </p>
+ * @author me09378
+ * @see <a href="https://pmd.github.io/pmd-6.7.0/pmd_userdocs_cli_reference.html">PMD CLI Options</a>
+ */
 public class TestRunPMD {
 
-	private static final String WHITE_SPACE = "\\s+";
+	public static final String WHITE_SPACE = "\\s+";
 	
 	//@Ignore("PMD Ruleset for AgencyPortal")
 	@Test
