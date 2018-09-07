@@ -9,8 +9,8 @@ the schema file:
 > xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.net/ruleset_2_0_0.xsd"
 
 We could (*optionally*) set up the XML catalog in Eclipse to make the schema assistant work.
-1. Select ï¿½Window -> Preferencesï¿½ to launch the Preferences dialog. 
-1. In the navigation tree expand the ï¿½XML -> XML Catalogï¿½.
+1. Select "Window -> Preferences" to open the Preferences dialog.
+1. In the navigation tree expand the "XML -> XML Catalog".
 1. Select "User Specified Entries" and click the "Add" button to add a User Specified Entry.
 1. Set "Location" to be the actual schema file, i.e. "HelloPMD/shcema/ruleset_2_0_0.xsd", and set "Key type" to be "Namespace name", "Key" to be "http://pmd.sourceforge.net/ruleset/2.0.0".
 1. Click "OK" and "Apply" button to make this new XML Catalo entry work.
@@ -24,9 +24,9 @@ You don't need to install the plugin for Eclipse (the standalone CLI tool would 
 
 To install the PMD plugin for Eclipse:
 1. Start Eclipse and open a project
-2. Select ï¿½Helpï¿½->ï¿½Software Updatesï¿½->ï¿½Find and Installï¿½
-3. Click ï¿½Nextï¿½, then click ï¿½New remote siteï¿½
-4. Enter ï¿½PMDï¿½ into the Name field and https://dl.bintray.com/pmd/pmd-eclipse-plugin/updates/ into the URL field
+2. Select "Helpï -> Software Updates -> ind and Install"
+3. Click "Next", then click "New remote site"
+4. Enter "PMD" into the Name field and https://dl.bintray.com/pmd/pmd-eclipse-plugin/updates/ into the URL field
 5. Click through the rest of the dialog boxes to install the plugin
 
 # Add PMD Library
