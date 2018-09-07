@@ -9,8 +9,8 @@ the schema file:
 > xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.net/ruleset_2_0_0.xsd"
 
 We could (*optionally*) set up the XML catalog in Eclipse to make the schema assistant work.
-1. Select “Window -> Preferences” to launch the Preferences dialog. 
-1. In the navigation tree expand the “XML -> XML Catalog”.
+1. Select ï¿½Window -> Preferencesï¿½ to launch the Preferences dialog. 
+1. In the navigation tree expand the ï¿½XML -> XML Catalogï¿½.
 1. Select "User Specified Entries" and click the "Add" button to add a User Specified Entry.
 1. Set "Location" to be the actual schema file, i.e. "HelloPMD/shcema/ruleset_2_0_0.xsd", and set "Key type" to be "Namespace name", "Key" to be "http://pmd.sourceforge.net/ruleset/2.0.0".
 1. Click "OK" and "Apply" button to make this new XML Catalo entry work.
@@ -24,20 +24,27 @@ You don't need to install the plugin for Eclipse (the standalone CLI tool would 
 
 To install the PMD plugin for Eclipse:
 1. Start Eclipse and open a project
-1. Select “Help”->”Software Updates”->”Find and Install”
-1. Click “Next”, then click “New remote site”
-1. Enter “PMD” into the Name field and https://dl.bintray.com/pmd/pmd-eclipse-plugin/updates/ into the URL field
-1. Click through the rest of the dialog boxes to install the plugin
+2. Select ï¿½Helpï¿½->ï¿½Software Updatesï¿½->ï¿½Find and Installï¿½
+3. Click ï¿½Nextï¿½, then click ï¿½New remote siteï¿½
+4. Enter ï¿½PMDï¿½ into the Name field and https://dl.bintray.com/pmd/pmd-eclipse-plugin/updates/ into the URL field
+5. Click through the rest of the dialog boxes to install the plugin
 
 # Add PMD Library
 You might also add the PMD library as dependency for this project, in order to invoke PMD directly in the code.
 1. Select "Windows" -> "Preferences", locate to "Java -> Build Path" -> "User Libraries";
-1. CLick "New" button to add a new user library, set up a name like "PMD";
-1. Click "Add External JARS" to import all those Jar files in the PMD "lib" directory
-1. Click "Aply and Close", then add this user library into current project's Libraries list.
+2. CLick "New" button to add a new user library, set up a name like "PMD";
+3. Click "Add External JARS" to import all those Jar files in the PMD "lib" directory
+4. Click "Aply and Close", then add this user library into current project's Libraries list.
 
+# .gitignore list
+* _/bin/_ the classes directory for current project
+* _/local-only/_ you can put any local files here, i.e. local PMD scripts, local configurations, etc.
+* _pmd-cache_ Enable PMD cache by add "-cache pmd-cache" as the argument fed to PMD. Refer to PMD CLI Reference for details.
 
 # References
 * [PMD official documentation](https://pmd.github.io/pmd-6.7.0/)
 * [PMD plugin for Eclipse](https://pmd.github.io/pmd-6.7.0/pmd_userdocs_tools.html#eclipse)
 * [Edit the XML Catalog settings in Eclipse](https://wiki.eclipse.org/Using_the_XML_Catalog)
+* [PMD CLI Reference](https://pmd.github.io/pmd-6.7.0/pmd_userdocs_cli_reference.html)
+* [CPD CLI Reference](https://pmd.github.io/pmd-6.7.0/pmd_userdocs_cpd.html#cli-options)
+* [Markdown Spec](https://guides.github.com/features/mastering-markdown/)
