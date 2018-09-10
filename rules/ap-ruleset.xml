@@ -6,13 +6,22 @@
 	<description>
 		PMD ruleset for the AgencyPortal project
 	</description>
-	
+
 	<rule ref="category/java/errorprone.xml/EmptyTryBlock" />
 	<rule ref="category/java/errorprone.xml/EmptyCatchBlock" />
 	<rule ref="category/java/errorprone.xml/EmptyIfStmt" />
 	<rule ref="category/java/errorprone.xml/EmptyWhileStmt" />
 	<rule ref="category/java/errorprone.xml/EmptyFinallyBlock" />
 	<rule ref="category/java/errorprone.xml/EmptySwitchStatements" />
+	<rule ref="category/java/errorprone.xml/UseEqualsToCompareStrings" />
+	<rule ref="category/java/errorprone.xml/AvoidCatchingNPE" />
+	<rule ref="category/java/design.xml/FinalFieldCouldBeStatic" />
+	<rule ref="category/java/bestpractices.xml/MissingOverride" />
+	<!-- <rule ref="category/java/bestpractices.xml/PreserveStackTrace" /> -->
+	<!-- <rule ref="category/java/bestpractices.xml/PositionLiteralsFirstInComparisons" 
+		/> -->
+
+
 
 	<rule name="EmptyForStmt" language="java" since="0.2"
 		message="Avoid empty 'for' statements" class="net.sourceforge.pmd.lang.rule.XPathRule">
@@ -47,4 +56,56 @@
  			]]>
 		</example>
 	</rule>
+
+	<rule name="tryCatchForIntegerParseInt" language="java" since="3.3"
+		message="Try/catch statement is needed for 'Integer.parseInt'" 
+		class="net.sourceforge.pmd.lang.rule.XPathRule"
+		externalInfoUrl="https://pmd.github.io/pmd/pmd_rules_java_errorprone.html#properlogger">
+		<description>
+			Try/catch statement is needed for "Integer.parseInt".
+		</description>
+		<priority>3</priority>
+		<properties>
+			<property name="xpath">
+				<value>
+					//MethodDeclaration[
+					count(.//PrimaryPrefix/Name[@Image='Integer.parseInt'])>0
+					and
+					count(.//TryStatement)=0
+					and
+					count(.//NameList/Name[@Image='Exception']) = 0
+					]
+				</value>
+			</property>
+		</properties>
+		<example>
+ 			<![CDATA[
+				public class Foo {
+   					 public void goodIntegerParseInt1()  {
+		 				try{
+			 				for(int i = 0 ; i<3 ; i++){
+				 				if(i == 2){
+					 				Integer.parseInt("a");
+				 				}
+			 				}
+			 			}
+		 				catch(Exception e){
+							e.getMessage();
+		 				}
+	    			}
+	 
+	 				public void goodIntegerParseInt2() throws Exception {
+			 			Integer.parseInt("a"); 
+	    			}
+	 			public void badIntegerParseInt2(){
+		 			Integer.parseInt("a"); 
+    			}
+			}
+			]]>
+		</example>
+	</rule>
+
+
+
+
 </ruleset>
