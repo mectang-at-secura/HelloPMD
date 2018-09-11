@@ -48,3 +48,14 @@ You might also add the PMD library as dependency for this project, in order to i
 * [PMD CLI Reference](https://pmd.github.io/pmd-6.7.0/pmd_userdocs_cli_reference.html)
 * [CPD CLI Reference](https://pmd.github.io/pmd-6.7.0/pmd_userdocs_cpd.html#cli-options)
 * [Markdown Spec](https://guides.github.com/features/mastering-markdown/)
+
+# How to set the custom PMD
+1. Select the target project -> right click -> properties
+2. Find the PMD -> enable PMD -> use the ruleset configured in a project file -> choose custom PMD ruleset
+
+Note: Before setting the custom PMD, please make sure you have already disabled the global configuration for PMD
+Window -> Properties -> PMD -> rule configuration -> uncheck the "Use global role management"
+
+# Two ways to run the PMD
+1. For the single file: right click in this file-> PMD -> check code
+2. For the whole project: open project Explorer -> right click the target project -> PMD -> check code
