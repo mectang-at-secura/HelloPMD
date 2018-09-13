@@ -1,6 +1,6 @@
 package com.ap.pmd.samplesource;
 
-public class TestPMD {
+public class SampleSourceOnAPCustomRuleset {
 	final String TEST = "test";
 	final static String TEST2 = "test2";
 	

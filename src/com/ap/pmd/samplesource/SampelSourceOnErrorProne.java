@@ -8,7 +8,7 @@ package com.ap.pmd.samplesource;
  * @author me09378
  *
  */
-public class TestErrorProne {
+public class SampelSourceOnErrorProne {
 
 	public void emptyTryBlock() {
 		try {

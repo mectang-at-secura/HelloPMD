@@ -1,7 +1,7 @@
 package com.ap.pmd.samplesource;
 
 
-public class TestCodeStyle {
+public class SampleSourceOnCodeStyle {
 
 	//Note: From 6.2.0 on, this rule supersedes WhileLoopMustUseBraces, ForLoopMustUseBraces, IfStmtMustUseBraces,
     //and IfElseStmtMustUseBraces.
