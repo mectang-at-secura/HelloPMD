@@ -1,7 +1,6 @@
 # HelloPMD
 A sample project to showcase the capabilities of PMD (source code analyzer)
 
-
 # Setup schema for PMD rules (Optional)
 Since the schemaLocation doesn't seem to work -- which means that the following schema location attribute won't load 
 the schema file:
@@ -24,7 +23,7 @@ You don't need to install the plugin for Eclipse (the standalone CLI tool would 
 
 To install the PMD plugin for Eclipse:
 1. Start Eclipse and open a project
-2. Select "Helpï -> Software Updates -> ind and Install"
+2. Select "Helpï¿½ -> Software Updates -> ind and Install"
 3. Click "Next", then click "New remote site"
 4. Enter "PMD" into the Name field and https://dl.bintray.com/pmd/pmd-eclipse-plugin/updates/ into the URL field
 5. Click through the rest of the dialog boxes to install the plugin
@@ -35,6 +34,17 @@ You might also add the PMD library as dependency for this project, in order to i
 2. CLick "New" button to add a new user library, set up a name like "PMD";
 3. Click "Add External JARS" to import all those Jar files in the PMD "lib" directory
 4. Click "Aply and Close", then add this user library into current project's Libraries list.
+
+# How to set the custom PMD
+1. Select the target project -> right click -> properties
+2. Find the PMD -> enable PMD -> use the ruleset configured in a project file -> choose custom PMD ruleset
+
+Note: Before setting the custom PMD, please make sure you have already disabled the global configuration for PMD
+Window -> Properties -> PMD -> rule configuration -> uncheck the "Use global role management"
+
+# Two ways to run the PMD
+1. For the single file: right click in this file-> PMD -> check code
+2. For the whole project: open project Explorer -> right click the target project -> PMD -> check code
 
 # .gitignore list
 * _/bin/_ the classes directory for current project
@@ -48,14 +58,4 @@ You might also add the PMD library as dependency for this project, in order to i
 * [PMD CLI Reference](https://pmd.github.io/pmd-6.7.0/pmd_userdocs_cli_reference.html)
 * [CPD CLI Reference](https://pmd.github.io/pmd-6.7.0/pmd_userdocs_cpd.html#cli-options)
 * [Markdown Spec](https://guides.github.com/features/mastering-markdown/)
-
-# How to set the custom PMD
-1. Select the target project -> right click -> properties
-2. Find the PMD -> enable PMD -> use the ruleset configured in a project file -> choose custom PMD ruleset
-
-Note: Before setting the custom PMD, please make sure you have already disabled the global configuration for PMD
-Window -> Properties -> PMD -> rule configuration -> uncheck the "Use global role management"
-
-# Two ways to run the PMD
-1. For the single file: right click in this file-> PMD -> check code
-2. For the whole project: open project Explorer -> right click the target project -> PMD -> check code
+* [SAXON Official site](http://saxon.sourceforge.net/)
