@@ -10,6 +10,13 @@
 		ref2: https://pmd.github.io/pmd-6.8.0/pmd_userdocs_configuring_rules.html
 	</description>
 	
+		
+		
+	<!-- Include and Exclude patterns -->
+	<exclude-pattern>.*/com/agencyport/.*</exclude-pattern>
+	<!-- <include-pattern>.*//.*</include-pattern> -->
+	
+	
 	<!-- bestpractices -->
 	<rule ref="category/java/bestpractices.xml/AbstractClassWithoutAbstractMethod"/>
 	<rule ref="category/java/bestpractices.xml/AccessorClassGeneration"/>
@@ -197,7 +204,7 @@
 	</rule>
 	<rule ref="category/java/design.xml/LogicInversion"/>
 	<!-- <rule ref="category/java/design.xml/LoosePackageCoupling"/> -->
-	<rule ref="category/java/design.xml/ModifiedCyclomaticComplexity"/>
+	<!-- <rule ref="category/java/design.xml/ModifiedCyclomaticComplexity"/> -->
 	<!-- <rule ref="category/java/design.xml/NcssConstructorCount"/> -->
 	<rule ref="category/java/design.xml/NcssCount">
 		<priority>5</priority>
@@ -441,7 +448,5 @@
 	<!-- security -->
 	<rule ref="category/java/security.xml/HardCodedCryptoKey"/>
 	<rule ref="category/java/security.xml/InsecureCryptoIv"/>
-		
-	
 	
 </ruleset>
