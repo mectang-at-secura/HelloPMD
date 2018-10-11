@@ -18,7 +18,24 @@ public class TestRunPMD {
 
 	public static final String WHITE_SPACE = "\\s+";
 	
-	//@Ignore("PMD Ruleset for AgencyPortal")
+	
+	
+	//@Ignore("PMD XML RUleset for AgencyPortal")
+	@Test
+	public void testRunCustomXMLRulSetAgencyPortal() {
+		String[] args = new String[] {
+			"-d",
+			"\"C:/VCS/Git/github.com/SECURAInsurance/AgencyPortal/Web Root/WEB-INF/autob/pagelibrary/policyCoveragesPage.xml\"",
+			"-R",
+			"rules/ap-ruleset-xml.xml",
+			"-no-cache",
+			"-f",
+			"text"
+		};
+		PMD.run(args);
+	}
+	
+	@Ignore("PMD Ruleset for AgencyPortal")
 	@Test
 	public void testRunCustomRuleSetAgencyPortal() {
 		String argStr = "-d ./src/ -R rules/ap-ruleset.xml -auxclasspath ./bin/ -no-cache -f text";

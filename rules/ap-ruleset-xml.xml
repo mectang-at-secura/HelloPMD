@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Custom Rules" xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XML-Schema-instance">
+	<!-- xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.net/ruleset_2_0_0.xsd"> -->
+	
+	<description>Custom rulset for the XML files (TDF, XARC Rules, Behaviors, etc.) in AP project</description>
+	
+	<rule name="TDFFieldElementAttrOutOfOrder"
+		language="xml"
+		since="1.0"
+		message="fieldelements attributs out of order: the recommended sequence would be: type, uniqueId, label, and id"
+		class="net.sourceforge.pmd.lang.rule.XPathRule">
+		<description>The first four attributes for fieldElement should be in the order: "type", "uniqueId", "label", and "id", 
+		as recommended for better maintenability</description>
+		<priority>3</priority>
+		<properties>
+			<property name="version">
+				<value>2.0</value>
+			</property>
+			<property name="xpath">
+				<value>
+				<!-- 
+				attribute() won't work, yet @* works fine;
+				name() wont' work, yet local-name() works fine.
+				
+				@type!='column' and @type!='hidden' and @type!='message' and
+				
+				@*[position()=1]/local-name()='type'	
+				and @*[position()=2]/local-name()='uniqueId'
+				and @*[position()=3]/local-name()='label'
+				and @*[position()=4]/local-name()='id'
+				
+				
+				
+				Note:
+				Position is messed up by PMD, i.e: check the following xpath on any TDF: 
+					@*[position()=last()]/local-name()='uniqueId'
+				and you'll get a long list of fieldElements. The result is totally wrong.
+				
+				 -->
+<![CDATA[
+//pageElement/fieldElement[
+		
+	 @*[position()=last()]/local-name()='uniqueId'	
+		
+ ]
+]]>
+<!-- <![CDATA[
+//pageElement/fieldElement[@type != 'hidden' and @type != 'message' 
+		and not(
+			attribute()[position()=1]/name()='type' 
+			and attribute()[position()=2]/name()='uniqueId' 
+			and attribute()[position()=3]/name()='label' 
+			and attribute()[position()=4]/name()='id'
+		)
+	]	
+]]>	 -->
+				</value>
+			</property>
+		</properties>
+		<example>
+<![CDATA[
+<fieldElement type="text" uniqueId="LocationNumber" label="Location #" id="Location.ItemIdInfo.AgencyId" maxLength="10" >
+]]>		
+		</example>
+	</rule>
+	
+</ruleset>
