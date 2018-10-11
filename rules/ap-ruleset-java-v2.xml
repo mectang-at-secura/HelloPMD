@@ -102,7 +102,7 @@
 		<priority>5</priority>
 	</rule>
 	<rule ref="category/java/codestyle.xml/ForLoopShouldBeWhileLoop"/>
-	<rule ref="category/java/codestyle.xml/ForLoopsMustUseBraces"/>
+	<!-- <rule ref="category/java/codestyle.xml/ForLoopsMustUseBraces"/> -->
 	<rule ref="category/java/codestyle.xml/FormalParameterNamingConventions">
 		<priority>5</priority>
 	</rule>
@@ -110,8 +110,8 @@
 	<rule ref="category/java/codestyle.xml/IdenticalCatchBranches">
 		<priority>5</priority>
 	</rule>
-	<rule ref="category/java/codestyle.xml/IfElseStmtsMustUseBraces"/>
-	<rule ref="category/java/codestyle.xml/IfStmtsMustUseBraces"/>
+	<!-- <rule ref="category/java/codestyle.xml/IfElseStmtsMustUseBraces"/> -->
+	<!-- <rule ref="category/java/codestyle.xml/IfStmtsMustUseBraces"/> -->
 	<rule ref="category/java/codestyle.xml/LinguisticNaming"/>
 	<rule ref="category/java/codestyle.xml/LocalHomeNamingConvention"/>
 	<rule ref="category/java/codestyle.xml/LocalInterfaceSessionNamingConvention"/>
@@ -127,7 +127,7 @@
 	<rule ref="category/java/codestyle.xml/MethodNamingConventions">
 		<priority>5</priority>
 	</rule>
-	<rule ref="category/java/codestyle.xml/MIsLeadingVariableName"/>
+	<!-- <rule ref="category/java/codestyle.xml/MIsLeadingVariableName"/> -->
 	<rule ref="category/java/codestyle.xml/NoPackage"/>
 	<rule ref="category/java/codestyle.xml/OnlyOneReturn">
 		<priority>5</priority>
@@ -160,8 +160,8 @@
 	<!-- <rule ref="category/java/codestyle.xml/UnnecessaryReturn"/> -->
 	<!-- <rule ref="category/java/codestyle.xml/UselessParentheses"/> -->
 	<rule ref="category/java/codestyle.xml/UselessQualifiedThis"/>
-	<rule ref="category/java/codestyle.xml/VariableNamingConventions"/>
-	<rule ref="category/java/codestyle.xml/WhileLoopsMustUseBraces"/>
+	<!-- <rule ref="category/java/codestyle.xml/VariableNamingConventions"/> -->
+	<!-- <rule ref="category/java/codestyle.xml/WhileLoopsMustUseBraces"/> -->
 		
 
 	<!-- design -->
@@ -209,9 +209,9 @@
 	<rule ref="category/java/design.xml/NcssCount">
 		<priority>5</priority>
 	</rule>
-	<rule ref="category/java/design.xml/NcssMethodCount">
+	<!-- <rule ref="category/java/design.xml/NcssMethodCount">
 		<priority>5</priority>
-	</rule>
+	</rule> -->
 	<!-- <rule ref="category/java/design.xml/NcssTypeCount"/> -->
 	<rule ref="category/java/design.xml/NPathComplexity">
 		<priority>5</priority>
@@ -223,7 +223,7 @@
 	<rule ref="category/java/design.xml/SimplifyBooleanReturns"/>
 	<rule ref="category/java/design.xml/SimplifyConditional"/>
 	<rule ref="category/java/design.xml/SingularField"/>
-	<rule ref="category/java/design.xml/StdCyclomaticComplexity"/>
+	<!-- <rule ref="category/java/design.xml/StdCyclomaticComplexity"/> -->
 	<!-- <rule ref="category/java/design.xml/SwitchDensity"/> -->
 	<rule ref="category/java/design.xml/TooManyFields">
 		<priority>5</priority>
