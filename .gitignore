@@ -1,3 +1,4 @@
 /bin/
 /local-only/
 pmd-cache
+/rules/ap-ruleset-java-v2.xml
